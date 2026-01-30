@@ -62,10 +62,10 @@ function renderFooter() {
 renderFooter();
 
 function renderLogoDescription() {
-  const logoImg = document.createElement("img");
-  logoImg.src = "img/logo-sigex-mini.jpeg";
-  logoImg.alt = "logo";
-  logoDescription.appendChild(logoImg);
+  const h4 = document.createElement("h4");
+  h4.classList.add(..."text-white mb-4".split(" "));
+  h4.textContent = "SIGEX";
+  logoDescription.appendChild(h4);
 
   const p = document.createElement("p");
   p.textContent =
@@ -136,7 +136,7 @@ function renderNewsLetter() {
 
   const p = document.createElement("p");
   p.textContent =
-    "Abonnez-vous à notre newsletter afin de rester informé de nos dernières actualités et services.";
+    "Abonnez-vous à notre newsletter afin de rester informer de nos dernières actualités et services.";
   newsLetter.appendChild(p);
 
   const div = document.createElement("div");
