@@ -272,7 +272,7 @@
             </p>
           </div>
           <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <form>
+            <form id="devisForm">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <div class="form-floating">
@@ -282,7 +282,7 @@
                       id="gname"
                       placeholder="Gurdian Name"
                     />
-                    <label for="gname">Nom complet</label>
+                    <label for="gname">Nom complet *</label>
                   </div>
                 </div>
                 <div class="col-sm-6">
@@ -293,7 +293,7 @@
                       id="gmail"
                       placeholder="Gurdian Email"
                     />
-                    <label for="gmail">E-mail</label>
+                    <label for="gmail">E-mail *</label>
                   </div>
                 </div>
                 <div class="col-sm-6">
@@ -305,7 +305,7 @@
                       placeholder="Child Name"
                     />
                     <label for="cname"
-                      >N de téléphone (Préciser l'indicatif)</label
+                      >N de téléphone (Préciser l'indicatif) *</label
                     >
                   </div>
                 </div>
@@ -314,21 +314,21 @@
                     <select
                       class="form-control bg-light border-0"
                       name=""
-                      id=""
+                      id="service"
                     >
                       <option value="">Nettoyages & Entretien de locaux</option>
-                      <option value="">Mise à disposition du personnel</option>
-                      <option value="">Formation professionnelle</option>
-                      <option value="">Location d'engins</option>
-                      <option value="">Support logistique minier</option>
-                      <option value="">Location de véhicule</option>
-                      <option value="">Restauration collective</option>
-                      <option value="">
+                      <option>Mise à disposition du personnel</option>
+                      <option>Formation professionnelle</option>
+                      <option>Location d'engins</option>
+                      <option>Support logistique minier</option>
+                      <option>Location de véhicule</option>
+                      <option>Restauration collective</option>
+                      <option>
                         Acceuil, tranferts & transport du personnel
                       </option>
-                      <option value="">Gestion de l'hébergement</option>
+                      <option>Gestion de l'hébergement</option>
                     </select>
-                    <label for="cage">Type de service</label>
+                    <label for="cage">Type de service *</label>
                   </div>
                 </div>
                 <div class="col-12">
@@ -339,7 +339,7 @@
                       id="message"
                       style="height: 100px"
                     ></textarea>
-                    <label for="message">Message</label>
+                    <label for="message">Message *</label>
                   </div>
                 </div>
                 <div class="col-12">
@@ -403,5 +403,7 @@
     <script src="js/render-footer.js"></script>
     <script src="js/header-image-render.js"></script>
     <script src="js/render-page-title.js"></script>
+    <script src="js/devis-form.js"></script>
+    <script src="js/newsletter-subscribe.js"></script>
   </body>
 </html>

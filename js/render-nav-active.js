@@ -136,10 +136,19 @@ function renderNavlink() {
 
 renderNavlink();
 
-function renderNavActice(navLink, a) {
-  const currentUrl = window.location.pathname;
+function getCurrentPage() {
+  const path = window.location.pathname;
 
-  if (currentUrl.includes(navLink.url)) {
+  if (path === "/" || path === "") return "index";
+
+  return path.split("/").pop().replace(".html", "");
+}
+
+function renderNavActice(navLink, a) {
+  const currentPage = getCurrentPage();
+  const navPage = navLink.url.replace(".html", "");
+
+  if (currentPage === navPage) {
     a.classList.add("active");
   }
 }

@@ -148,17 +148,18 @@ function renderNewsLetter() {
   input.classList.add(
     ..."form-control bg-transparent w-100 py-3 ps-4 pe-5".split(" "),
   );
+  input.id = "newsletter-input";
   input.type = "text";
   input.placeholder = "E-mail";
   div.appendChild(input);
 
   const button = document.createElement("button");
-  button.type = "button";
   button.classList.add(
     ..."btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2".split(
       " ",
     ),
   );
+  button.id = "subscribe-btn";
   button.textContent = "S'abonner";
   div.appendChild(button);
 

@@ -32,9 +32,19 @@ const pageTitleTab = [
   ],
 ];
 
+function getCurrentPage() {
+  const path = window.location.pathname;
+
+  if (path === "/" || path === "") return "index";
+
+  return path.split("/").pop().replace(".html", "");
+}
+
 function renderIconAndTitle() {
+  const currentPage = getCurrentPage();
+
   pageTitleTab[1].forEach((pageTitle) => {
-    if (window.location.pathname.includes(pageTitle.pageName)) {
+    if (currentPage === pageTitle.pageName) {
       titles.textContent = pageTitle.title;
       link.href = pageTitleTab[0];
       link.rel = "icon";
